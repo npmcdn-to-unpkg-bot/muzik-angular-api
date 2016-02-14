@@ -1,0 +1,39 @@
+<div class="container">
+
+
+    <a href="#/home">Home</a>/<a href="#/albums">Albums</a>/{{album.albums[0].name}}
+
+    <ul>
+
+        <img class="album_single" ng-src="{{album.albums[0].cover}}" alt="caca">
+        <div class="information">
+            <span class="info">Name : </span> {{album.albums[0].name}} <br>
+            <span class="info">Description : </span> {{album.albums[0].description}}<br>
+            <span class="info">Date : </span> {{album.albums[0].release_date | date:'dd/MM/yyyy'}}<br>
+            <span class="info">Rate : </span> {{album.albums[0].popularity}}/6<br>
+        </div>
+
+
+
+
+        <div class="albums_music">
+
+
+
+            <li ng-repeat="music in album.albums" ng-click="selectMusic(music.mp3)">
+
+                <div class="music_info">
+                    <div>{{music.name}}</div>
+                    <div>{{music.duration | secondsToHHmmss}}</div>
+                </div>
+                <audio ng-if="musicSelected == music.mp3" autoplay controls="controls">
+                    <source ng-src="{{ musicSelected | sce }}" type="audio/mp3" />
+                    Votre navigateur n'est pas compatible
+                </audio>
+                <span class="listen"><i class="small material-icons">music_video</i>Listen Music</span>
+
+            </li>
+        </div>
+    </ul>
+
+</div>

@@ -1,0 +1,42 @@
+<!--<div>
+    titre: {{ title }}
+
+    <a href="#/home">home</a>
+
+    <ul>
+        <li ng-repeat="artist in artists.artists"><a ng-href="#/artists/{{ artist.id }}"> {{ artist.name }} </a></li>
+    </ul>
+
+</div>-->
+
+
+<div class="container">
+
+    <a href="#/home">Home/</a>{{ title }}
+
+
+
+
+    <input type="text" ng-model="search.name" ng-change="begin = 0; page = 1;">
+
+
+    <div class="all_albums" ng-class="{loader: !artists.artists.length}">
+        <div class="pochette" ng-repeat="artist in artists.artists | filter:search | limitTo:count:begin">
+            <a ng-href="#/artist/{{ artist.id }}">
+                <img class="artist_photo" ng-src="{{artist.photo}}" alt="">
+                <span class="album_name">{{artist.name}}</span>
+            </a>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+    <!-- <h3>page: {{page}}</h3>
+     <h3>begin: {{begin}}</h3>
+     <h3>count: {{count}}</h3>
+-->
+    <ul class="pagination" ng-if="search.name == undefined || search.name == ''">
+        <li><a ng-click="paginate('-')">prev</a></li>
+        <li class="active">{{page}}</li>
+        <li><a ng-click="paginate('+')">next</a></li>
+    </ul>
+</div>

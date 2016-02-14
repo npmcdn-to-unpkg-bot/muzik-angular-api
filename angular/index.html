@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="musik">
+<head>
+    <meta charset="UTF-8">
+    <title>Musik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/app.css">
+
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#/home" class="brand-logo center">Musik</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/albums">Albums</a></li>
+            <li><a href="#/artists">Artists</a></li>
+            <li><a href="#/genres">Genres</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div ng-view></div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="http://passy.github.io/angular-masonry/angular-masonry.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controller/AlbumsController.js"></script>
+    <script src="app/controller/HomeController.js"></script>
+    <script src="app/controller/AlbumController.js"></script>
+    <script src="app/controller/ArtistsController.js"></script>
+    <script src="app/controller/ArtistController.js"></script>
+    <script src="app/controller/GenreController.js"></script>
+    <script src="app/controller/GenresController.js"></script>
+    <script src="app/filters/sce.js"></script>
+    <script src="app/service/api.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+body {
+    font-family: Impact, fantasy;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.pochette img {
+    width: 100px;
+    float: left;
+    position: relative;
+    margin: 2px;
+    z-index: 5;
+    transform: scale(1.00);
+    transition-duration: 0.5s;
+}
+
+.pochette :hover .album_cover{
+    transform: scale(2.50);
+    transition-duration: 0.5s;
+    z-index: 10;
+}
+.pochette :hover .album_name {
+    opacity: 1 !important;
+    color: rgb(238, 110, 115);
+    text-align: center;
+    right: 56px;
+    top: 141px;
+    text-shadow: black 1px 1px 5Px;
+    font-size: 44px;
+    width: 201px;
+}
+
+.pochette a{
+    /* position : relative; */
+    /* clear: both; */
+    /* width: 100px; */
+    /* height: 200px; */
+}
+
+.album_name {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    z-index: 12;
+    top: 23px;
+    width: 250px;
+}
+
+.loader {
+    margin: 100px auto;
+    font-size: 25px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load5 1.1s infinite ease;
+    animation: load5 1.1s infinite ease;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+@-webkit-keyframes load5 {
+    0%,
+    100% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.7), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.5), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.7);
+    }
+    12.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.7), 1.8em -1.8em 0 0em #EE6E73, 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.5);
+    }
+    25% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.5), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.7), 2.5em 0em 0 0em #EE6E73, 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    37.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.5), 2.5em 0em 0 0em rgba(238, 110, 115, 0.7), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    50% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.5), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.7), 0em 2.5em 0 0em #EE6E73, -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    62.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.5), 0em 2.5em 0 0em rgba(238, 110, 115, 0.7), -1.8em 1.8em 0 0em #EE6E73, -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    75% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.5), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.7), -2.6em 0em 0 0em #EE6E73, -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    87.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.5), -2.6em 0em 0 0em rgba(238, 110, 115, 0.7), -1.8em -1.8em 0 0em #EE6E73;
+    }
+}
+@keyframes load5 {
+    0%,
+    100% {
+        box-shadow: 0em -2.6em 0em 0em #EE6E73, 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.5), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.7);
+    }
+    12.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.7), 1.8em -1.8em 0 0em #EE6E73, 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.5);
+    }
+    25% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.5), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.7), 2.5em 0em 0 0em #EE6E73, 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    37.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.5), 2.5em 0em 0 0em rgba(238, 110, 115, 0.7), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    50% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.5), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.7), 0em 2.5em 0 0em #EE6E73, -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.2), -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    62.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.5), 0em 2.5em 0 0em rgba(238, 110, 115, 0.7), -1.8em 1.8em 0 0em #EE6E73, -2.6em 0em 0 0em rgba(238, 110, 115, 0.2), -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    75% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.5), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.7), -2.6em 0em 0 0em #EE6E73, -1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2);
+    }
+    87.5% {
+        box-shadow: 0em -2.6em 0em 0em rgba(238, 110, 115, 0.2), 1.8em -1.8em 0 0em rgba(238, 110, 115, 0.2), 2.5em 0em 0 0em rgba(238, 110, 115, 0.2), 1.75em 1.75em 0 0em rgba(238, 110, 115, 0.2), 0em 2.5em 0 0em rgba(238, 110, 115, 0.2), -1.8em 1.8em 0 0em rgba(238, 110, 115, 0.5), -2.6em 0em 0 0em rgba(238, 110, 115, 0.7), -1.8em -1.8em 0 0em #EE6E73;
+    }
+}
+
+.album_single {
+    margin-bottom: 26px;
+    box-shadow: -7px -1px 25px 0 black;
+    perspective: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.artist_photo {
+    width: 100px;
+    height: 100px;
+}
+
+.pochette :hover .artist_photo {
+    transform: scale(2.50);
+    transition-duration: 0.5s;
+    z-index: 10;
+}
+
+.albums_music {
+    clear: both;
+
+}
+
+.info {
+    font-size: 18px;
+    color: grey;
+}
+
+.albums_artist {
+    margin-top: 35px;
+}
+
+.albums_music li:hover {
+    background-color: rgba(238, 110, 115, 0.7);
+    transition-duration: 0.5s;
+}
+
+.albums_music li {
+    clear: both;
+    cursor: pointer;
+    background-color: white;
+    transition-duration: 0.5s;
+    border: 1px solid rgba(238, 110, 115, 0.42);
+    padding: 8px;
+    height: 60px;
+    margin-bottom: 7Px;
+}
+
+.listen {
+    float: right;
+
+}
+
+audio {
+    position: absolute;
+    top: 49%;
+    right: 62%;
+    width: 360px;
+}
+.music_info {
+    float: left;
+}
+
+.listen {
+    font-size: 17px;
+}

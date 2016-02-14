@@ -1,0 +1,17 @@
+<div class="container">
+
+
+    <a href="#/home">Home</a>/Genres
+
+    <ul>
+            <div ng-repeat="genre in genres.genres">
+                <a ng-href="#/genre/{{ genre.id }}">
+
+                    <span >{{ genre.name }}</span>
+                </a>
+            </div>
+
+
+    </ul>
+
+</div>

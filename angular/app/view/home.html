@@ -1,0 +1,11 @@
+<div class="container">
+    Home
+
+    <div class="pochette" ng-repeat="album in rand.albums">
+        <a ng-href="#/album/{{ album.id }}">
+            <img class="album_cover" ng-src="{{album.cover}}" alt="">
+            <span class="album_name">{{album.name}}</span>
+        </a>
+    </div>
+
+</div>

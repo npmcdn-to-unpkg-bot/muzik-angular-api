@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Documentation API</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Musik - API</h1>
+
+    <h2>Une api qui retourne du JSON développer pour un projet au sein de la webacademie</h2>
+
+    <a href="http://mohamedbenfriha.me">mohamedbenfriha.me</a>
+    <p>Benfriha Mohamed</p>
+    <p>API VERSION : 1.0</p>
+
+    <div class="api">
+
+        <div class="albums cadre">Albums: tout sur les albums <span class="show right">voir/caché</span> </div>
+        <div class="gets">
+            <div class="get">[GET] /albums <span class="right">Liste tous les albums</span></div>
+            <div class="get">[GET] /albums/{id} <span class="right">Liste un album avec ses musiques par l'ID</span></div>
+            <div class="get">[GET] /albums/artists{id} <span class="right">Liste tous les albums d'un artistes par l'ID</span></div>
+            <div class="get">[GET] /albums/rand <span class="right">Liste 10 albums au hasard</span></div>
+
+        </div>
+
+
+        <div class="artist cadre">Artistes: accéder aux artistes <span class="show right">voir/caché</span>  </div>
+        <div class="gets">
+            <div class="get">[GET] /artists <span class="right">Liste tous les artistes</span></div>
+            <div class="get">[GET] /artists/{id} <span class="right">Retourne un artiste</span></div>
+        </div>
+        <div class="genres cadre">Genres: lister les genres <span class="show right">voir/caché</span> </div>
+        <div class="gets">
+            <div class="get">[GET] /genres <span class="right">Liste tous les genres</span></div>
+            <div class="get">[GET] /genres/{id} <span class="right">Liste les albums du genre par l'ID</span></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+
+
+    $('.cadre').on('click', function(){
+        if ($(this).next('.gets').css('display') == 'none')
+            $(this).next('.gets').slideDown(500);
+        else
+            $(this).next('.gets').slideUp(500);
+    })
+</script>
+
+</body>
+</html>

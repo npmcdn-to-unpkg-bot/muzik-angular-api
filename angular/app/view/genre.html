@@ -1,0 +1,29 @@
+<div class="container">
+
+
+    <a href="#/home">Home</a>/<a href="#/genres">Genres</a>/{{genre.genres[0].genre_name}}
+
+
+
+
+
+    <div class="all_albums" ng-class="{loader: !genre.genres.length}">
+        <div class="pochette" ng-repeat="genre in genre.genres | limitTo:count:begin">
+            <a ng-href="#/album/{{ genre.id }}">
+                <img class="album_cover" ng-src="{{genre.cover}}" alt="">
+                <span class="album_name">{{genre.name}}</span>
+            </a>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <ul class="pagination" ng-if="search.name == undefined || search.name == ''">
+        <li><a ng-click="paginate('-')">prev</a></li>
+        <li class="active">{{page}}</li>
+        <li><a ng-click="paginate('+')">next</a></li>
+    </ul>
+</div>
+
+
+</div>

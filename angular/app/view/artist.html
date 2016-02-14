@@ -1,0 +1,29 @@
+<div class="container">
+
+
+    <a href="#/home">Home</a>/<a href="#/artist">Artist</a>/{{artist.artists.name}}
+
+    <ul>
+
+        <img class="album_single" ng-src="{{artist.artists.photo}}" alt="caca">
+        <div class="information">
+        <span class="info">Name : </span> {{artist.artists.name}} <br>
+        <span class="info">His style : </span> {{artist.artists.description}}<br>
+        <span class="info">Bio : </span> {{artist.artists.bio}}
+        </div>
+
+        <div class="albums_artist">
+            <span class="info">These albums</span>
+        <hr>
+
+            <div class="pochette" ng-repeat="album in album.albums">
+                <a ng-href="#/album/{{ album.albums_id }}">
+                    <img class="album_cover" ng-src="{{album.cover}}" alt="">
+                    <span class="album_name">{{album.albums_name}}</span>
+                </a>
+            </div>
+        </div>
+
+    </ul>
+
+</div>
